@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "rm -rf ./dist && tsc -b",
-    "dev": "node --watch ./dist/index.js"
+    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\""
   },
   "keywords": [],
   "author": "Sameer Katija",
@@ -13,6 +13,11 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "tsc-watch": "^6.2.1"
   }
 }
